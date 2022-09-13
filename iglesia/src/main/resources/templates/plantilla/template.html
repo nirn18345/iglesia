@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<title>SACRAMENTO DIGITAL</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+
+
+
+<body>
+	<!-- BARRA DE NAVEGACION iglesia -->
+	<header th:fragment="header">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container">
+			 <img th:src="@{/img/logo260.jpg}" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                aria-hidden="true" class="me-2" viewBox="0 0 24 24" />
+
+            <a class="navbar-brand d-flex align-items-center">
+                <strong>
+                    Sacramento </br>
+                    Digital
+                </strong>
+            </a>
+				
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="/">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/plantilla/Consultar/}">Consulta</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/plantilla/Feligreses/}">Feligreses</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control nav-form-control me-2" type="search"
+							placeholder="Search" aria-label="Search" />
+						<button class="btn btn-outline-light" type="submit">
+							Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+
+	<!--  CONTENIDO -->
+	<div class="container"></div>
+
+	<!-- PIE DE PAGINA -->
+
+	<footer th:fragment="footer"
+		class="bg-dark text-white text-center fixed-bottom">
+		
+
+		<p>Parroquia San Juan Apóstol</p>
+        <p>@SanJuanApostolGYE · Organización religiosa</p>
+
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+		<script src="js/bootstrap.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <script src="js/formulario.js"></script>
+    <script src="js/form-validation.js"></script>
+
+    <script src="js/cheatsheet.js"></script>
+
+
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+<body>
+
+	<header th:replace="plantilla/template :: header"></header>
+
+	<div class="container">
+
+
+		<section class="py-2 text-start container">
+			<div class="row py-lg-2">
+				<h1 class="fw-light">Feligreses</h1>
+				<button style="width: auto;" onclick="Mostrar();">Añadir</button>
+			</div>
+		</section>
+		
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellido</th>
+					<th scope="col">Cedula</th>
+					<th scope="col">Direccion</th>
+					<th scope="col">Fecha N.</th>
+					<th scope="col">parroquia</th>
+					<th scope="col">Acciones</th>
+					
+				</tr>
+			</thead>
+			<tbody class="table-group-divider">
+				<tr>
+					<td>Felipe</td>
+					<td>Rodriguez</td>
+					<td>0954858596</td>
+					<td>mapasingue</td>
+					<td>12/03/1995</td>
+					<td>tarqui</td>
+					<td><button>editar</button>
+						<button>eliminar</button></td>
+					
+				</tr>
+					<tr>
+					<td>Felipe</td>
+					<td>Rodriguez</td>
+					<td>0954858596</td>
+					<td>mapasingue</td>
+					<td>12/03/1995</td>
+					<td>tarqui</td>
+					<td><button>editar</button>
+						<button>eliminar</button></td>
+					
+				</tr>
+					<tr>
+					<td>Felipe</td>
+					<td>Rodriguez</td>
+					<td>0954858596</td>
+					<td>mapasingue</td>
+					<td>12/03/1995</td>
+					<td>tarqui</td>
+					<td><button>editar</button>
+						<button>eliminar</button></td>
+					
+				</tr>
+				
+
+			</tbody>
+		</table>
+
+		
+		<script>
+            function Mostrar() {
+            document.getElementById("formulario").style.display="block";
+            }
+            
+          </script>
+
+
+		<form id="formulario" style="display: none;">
+			<div class="mb-3">
+				<label for="identificacion" class="form-label">Identificacion:</label>
+				<input id="identificacion" type="text" class="form-control"
+					placeholder="Ingresa su identificacion" required
+					name="identificacionCampo" />
+			</div>
+			<div class="mb-3">
+				<label for="nombreprimer" class="form-label">Primer Nombre:</label>
+				<input id="nombreprimer" type="text" class="form-control"
+					placeholder="Ingresa su primer nombre" required
+					name="nombreprimerCampo" />
+			</div>
+			<div class="mb-3">
+				<label for="nombresegundo" class="form-label">Segundo
+					Nombre:</label> <input id="nombresegundo" type="text" class="form-control"
+					placeholder="Ingresa su segundo nombre" name="nombresegundoCampo" />
+			</div>
+			<div class="mb-3">
+				<label for="apellidoprimer" class="form-label">Primer
+					Apellido:</label> <input id="apellidoprimer" type="text"
+					class="form-control" placeholder="Ingresa su primer apellido"
+					required name="apellidoprimerCampo" />
+			</div>
+			<div class="mb-3">
+				<label for="apellidosegundo" class="form-label">Segundo
+					Apellido:</label> <input id="apellidosegundo" type="text"
+					class="form-control" placeholder="Ingresa su segundo apellido"
+					required name="apellidosegundoCampo" />
+			</div>
+
+			<div class="mb-3">
+				<label for="direccion" class="form-label">Dirección:</label> <input
+					id="direccion" type="text" class="form-control"
+					placeholder="Ingresa su dirección" required name="direccionCampo" />
+			</div>
+
+			<div class="mb-3">
+				<label for="telefono" class="form-label">Teléfono:</label> <input
+					id="telefono" type="text" class="form-control"
+					placeholder="Ingresa su teléfono" required name="telefonoCampo" />
+			</div>
+
+			<div class="mb-3">
+				<label for="email" class="form-label">Email:</label> <input
+					id="email" type="email" class="form-control"
+					placeholder="Ingresa su email" aria-describedby="emailHelp"
+					name="emailCampo" />
+				<div id="emailHelp" class="form-text">No compartiremos tu
+					email con nadie.</div>
+			</div>
+			<div class="mb-3">
+				<label for="fechanacimiento" class="form-label">Fecha de
+					Nacimiento:</label> <input id="fechanacimiento" type="date"
+					class="form-control" placeholder="Ingresa su Fecha de Nacimiento"
+					required name="fechanacimientoCampo" />
+			</div>
+			<div class="mb-3">
+				<label for="fechanafuncion" class="form-label">Fecha
+					Función:</label> <input id="fechanafuncion" type="date"
+					class="form-control" placeholder="Fecha función" required
+					name="fechanafuncionCampo" />
+			</div>
+
+
+
+
+			<div class="col-md-2">
+				<label for="genero" class="form-label">Género</label> <select
+					class="form-select" id="genero" required>
+					<option value="">Escoger...</option>
+					<option>Hombre</option>
+					<option>Mujer</option>
+				</select>
+				<div class="invalid-feedback">Por favor escoger género.</div>
+			</div>
+
+
+			<div class="col-md-5">
+				<label for="pais" class="form-label">Paises</label> <select
+					class="form-select" id="pais" required>
+					<option value="">Escoger...</option>
+					<option>Ecuador</option>
+					<option>Colombia</option>
+					<option>Venezuela</option>
+					<option>Perú</option>
+				</select>
+				<div class="invalid-feedback">Por favor escoger país.</div>
+			</div>
+
+			<div class="mb-3">
+				<input type="checkbox" name="checkCampo" id="checkbox"
+					class="form-check-input" /> <label for="checkbox"
+					class="form-check-label">Estado</label>
+			</div>
+			<button id="btnEnviar" class="btn btn-primary w-100" type="submit">
+				Enviar</button>
+
+			<button id="btnCargando" class="btn btn-secondary w-100 d-none"
+				type="button" disabled>
+				<span class="spinner-grow spinner-grow-sm" role="status"
+					aria-hidden="true"></span> Cargando...
+			</button>
+
+		</form>
+		
+	</div>
+	
+		<footer th:replace="plantilla/template :: footer"> </footer>
+
+
+
+
+</body>
+</html>
